@@ -10,6 +10,10 @@ export default defineConfig({
     react(),
     legacy()
   ],
+  build: {
+    outDir: '../../docs/lab01_react',
+    emptyOutDir: true
+  },
   test: {
     globals: true,
     environment: 'jsdom',
