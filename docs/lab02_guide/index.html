@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KKU Campus Guide - แนะนำสถานที่ มข.</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Kanit', sans-serif;
+            line-height: 1.6;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+                header {
+            background-color: #A73B24;
+            color: white;
+            padding: 2rem 1rem;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .student-info {
+            background-color: rgba(255, 255, 255, 0.2);
+            display: inline-block;
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            margin-top: 10px;
+            font-weight: 400;
+        }
+
+        .site-logo {
+            width: 110px;            
+            height: 110px;
+            object-fit: cover;
+            border-radius: 50%;                    
+            margin-bottom: 1.5rem;                      
+            animation: bounceInDown 1s ease-out 0.2s backwards; 
+            background-color: white; 
+        }
+
+        @keyframes bounceInDown {
+            0% { opacity: 0; transform: translateY(-100px) scale(0.8); }
+            60% { opacity: 1; transform: translateY(15px) scale(1.05); }
+            80% { transform: translateY(-5px) scale(0.98); }
+            100% { opacity: 1; transform: translateY(0) scale(1); }
+        }
+
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .intro {
+            text-align: center;
+            margin-bottom: 3rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        
+        .location-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            margin-bottom: 4rem; 
+        }
+
+        article.location-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+            border: 1px solid #eee;
+        }
+
+        article.location-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .card-content { padding: 1.5rem; }
+        .card-content h3 { color: #A73B24; margin-bottom: 1rem; font-size: 1.5rem; }
+        .card-content p { font-size: 0.95rem; color: #666; margin-bottom: 1rem; }
+
+        .image-gallery { display: flex; gap: 10px; margin-top: 1rem; }
+        .image-gallery img {
+            width: 50%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 8px;
+            background-color: #ddd;
+        }
+
+        
+        .form-section {
+            background-color: #fdfbf7;
+            border-radius: 16px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.05);
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 2.5rem;
+            border: 1px solid #eee;
+            margin-top: 4rem;
+        }
+
+        .form-header { text-align: center; margin-bottom: 2rem; }
+        .form-header h2 { 
+            font-size: 1.8rem; 
+            color: #333; 
+            position: relative; 
+            display: inline-block; 
+            padding-bottom: 10px; 
+        }
+        .form-header h2::after { 
+            content: ''; 
+            position: absolute; 
+            bottom: 0; 
+            left: 50%; 
+            transform: translateX(-50%); 
+            width: 50px; 
+            height: 4px; 
+            background-color: #e67e22; 
+            border-radius: 2px; 
+        }
+
+        .form-group { margin-bottom: 1.5rem; }
+        .form-group label { display: block; margin-bottom: 0.5rem; font-weight: 500; color: #444; }
+        
+        .form-control { 
+            width: 100%; 
+            padding: 12px 15px; 
+            border: 1px solid #ddd; 
+            border-radius: 8px; 
+            font-family: 'Kanit', sans-serif; 
+            font-size: 1rem; 
+            background-color: white; 
+            transition: border-color 0.3s; 
+        }
+        .form-control:focus { 
+            outline: none; 
+            border-color: #e67e22; 
+            box-shadow: 0 0 0 3px rgba(230, 126, 34, 0.1); 
+        }
+        
+        textarea.form-control { resize: vertical; min-height: 120px; }
+
+        .btn-submit { 
+            display: block; 
+            width: 100%; 
+            padding: 12px; 
+            background-color: #e67e22; 
+            color: white; 
+            border: none; 
+            border-radius: 8px; 
+            font-size: 1.1rem; 
+            font-family: 'Kanit', sans-serif; 
+            font-weight: 500; 
+            cursor: pointer; 
+            transition: background-color 0.3s, transform 0.2s; 
+            margin-top: 1rem; 
+        }
+        .btn-submit:hover { 
+            background-color: #d35400; 
+            transform: translateY(-2px); 
+        }
+
+        
+        footer {
+            background-color: #333;
+            color: #ccc;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+
+        
+        @media (min-width: 768px) {
+            .location-grid { grid-template-columns: 1fr 1fr; }
+        }
+        
+        @media (min-width: 1024px) {
+            header h1 { font-size: 3rem; }
+            .image-gallery img { height: 180px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <img src="static/images/logo.png" alt="KKU Campus Guide Logo" class="site-logo">
+        
+        <h1>KKU Campus Guide</h1>
+        <p class="subtitle">แนะนำสถานที่น่าสนใจภายในมหาวิทยาลัยขอนแก่น</p>
+        
+        <div class="student-info">
+            รหัสนักศึกษา: 663380012-6 &nbsp;|&nbsp; นายณัฐพัฒน์ แสนตรี
+        </div>
+    </header>
+
+    <main class="container">
+        
+        <section class="intro">
+            <h2>ยินดีต้อนรับสู่รั้วมอดินแดง</h2>
+            <p>มหาวิทยาลัยขอนแก่นมีพื้นที่กว้างขวางและมีสถานที่สวยงามมากมาย ทั้งแหล่งเรียนรู้และสถานที่พักผ่อนหย่อนใจ นี่คือ 4 สถานที่ไฮไลท์ที่คุณไม่ควรพลาด</p>
+        </section>
+
+        <section class="location-grid">
+
+            <article class="location-card">
+                <div class="card-content">
+                    <h3>1. หอศิลปวัฒนธรรม</h3>
+                    <p>ศูนย์รวมศิลปวัฒนธรรมอีสาน ตั้งอยู่ริมบึงสีฐาน โดดเด่นด้วยสถาปัตยกรรมทรงเล้าข้าวประยุกต์ เป็นสถานที่จัดแสดงนิทรรศการศิลปะ หมุนเวียนตลอดทั้งปี และเป็นแลนด์มาร์คสำคัญในการถ่ายภาพรับปริญญา</p>
+                    <div class="image-gallery">
+                        <img src="static/images/img1.jpg" alt="บรรยากาศบึงสีฐาน 1">
+                        <img src="static/images/img2.jpg" alt="บรรยากาศบึงสีฐาน 2">
+                    </div>
+                </div>
+            </article>
+
+            <article class="location-card">
+                <div class="card-content">
+                    <h3>2. บึงสีฐาน</h3>
+                    <p>สถานที่พักผ่อนหย่อนใจยอดนิยมของชาว มข. และบุคคลภายนอก เป็นสวนสาธารณะขนาดใหญ่ที่มีบึงน้ำล้อมรอบ เหมาะสำหรับการวิ่งออกกำลังกาย ปั่นจักรยาน หรือนั่งชมพระอาทิตย์ตกดิน พร้อมทั้งเป็นสถานที่จัดงานลอยกระทงประจำปี</p>
+                    <div class="image-gallery">
+                        <img src="static/images/img3.jpg" alt="หอศิลป์ มข. 1">
+                        <img src="static/images/img4.jpg" alt="หอศิลป์ มข. 2">
+                    </div>
+                </div>
+            </article>
+
+            <article class="location-card">
+                <div class="card-content">
+                    <h3>3. อาคารสิริคุณากร</h3>
+                    <p>หรือตึกอธิการบดี เป็นอาคารสูงที่ตั้งอยู่ใจกลางมหาวิทยาลัย มีความสวยงามและทันสมัย บริเวณด้านหน้ามีลานน้ำพุและสนามหญ้ากว้างขวาง เป็นศูนย์กลางการบริหารงานของมหาวิทยาลัย</p>
+                    <div class="image-gallery">
+                        <img src="static/images/img5.jpg" alt="ตึกสิริคุณากร 1">
+                        <img src="static/images/img6.jpg" alt="ตึกสิริคุณากร 2">
+                    </div>
+                </div>
+            </article>
+
+            <article class="location-card">
+                <div class="card-content">
+                    <h3>4. อุทยานวิทยาศาสตร์</h3>
+                    <p>แลนด์มาร์คแห่งใหม่ที่มีความล้ำสมัยทางสถาปัตยกรรม ตั้งอยู่ทางฝั่งทิศใต้ของมหาวิทยาลัย เป็นศูนย์กลางการวิจัยและนวัตกรรม มีพื้นที่ Co-working space และ "The Beegins" อาคารที่มีดีไซน์เหมือนยานอวกาศ</p>
+                    <div class="image-gallery">
+                        <img src="static/images/img7.jpg" alt="อุทยานวิทยาศาสตร์ 1">
+                        <img src="static/images/img8.jpg" alt="อุทยานวิทยาศาสตร์ 2">
+                    </div>
+                </div>
+            </article>
+
+        </section>
+
+        <section class="form-section">
+            <div class="form-header">
+                <h2>แนะนำสถานที่ใหม่</h2>
+            </div>
+            
+            <form action="https://api.web3forms.com/submit" method="POST">
+                
+                <input type="hidden" name="access_key" value="d2bb5cbb-5507-4ddb-9d64-3a56e2450e92">
+
+                <div class="form-group">
+                    <label for="locationName">ชื่อสถานที่:</label>
+                    <input type="text" id="locationName" name="location_name" class="form-control" placeholder="กรุณาป้อนชื่อสถานที่" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="locationDetail">รายละเอียด:</label>
+                    <textarea id="locationDetail" name="details" class="form-control" placeholder="บรรยายรายละเอียดเกี่ยวกับสถานที่" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="locationUrl">ลิงก์ภาพ (URL):</label>
+                    <input type="url" id="locationUrl" name="image_url" class="form-control" placeholder="https://example.com/image.jpg">
+                </div>
+
+                <button type="submit" class="btn-submit">ส่งข้อมูล</button>
+            </form>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2024 KKU Campus Guide Layout.</p>
+    </footer>
+
+</body>
+</html>
