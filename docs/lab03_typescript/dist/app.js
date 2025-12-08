@@ -25,8 +25,11 @@ document.getElementById("addBtn").onclick = () => {
     const id = document.getElementById("id").value;
     const year = Number(document.getElementById("year").value);
     const major = document.getElementById("major").value;
-    //  เพิ่ม title_name,first_name,last_name, email ให้ครบ
-    const student = { id, year, major, title_name: "", first_name: "", last_name: "", email: "" };
+    const title_name = document.getElementById("title_name").value;
+    const first_name = document.getElementById("first_name").value;
+    const last_name = document.getElementById("last_name").value;
+    const email = document.getElementById("email").value;
+    const student = { id, year, major, title_name, first_name, last_name, email };
     manager.addStudent(student);
     renderTable();
 };

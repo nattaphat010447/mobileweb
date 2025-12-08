@@ -32,8 +32,11 @@ function renderTable(elementId: string = "studentTableBody"): void {
   const id = (document.getElementById("id") as HTMLInputElement).value;
   const year = Number((document.getElementById("year") as HTMLInputElement).value);
   const major = (document.getElementById("major") as HTMLInputElement).value;
-   //  เพิ่ม title_name,first_name,last_name, email ให้ครบ
-  const student: Student = { id, year, major, title_name: "", first_name: "", last_name: "", email: "" };
+  const title_name = (document.getElementById("title_name") as HTMLInputElement).value;
+  const first_name = (document.getElementById("first_name") as HTMLInputElement).value;
+  const last_name = (document.getElementById("last_name") as HTMLInputElement).value;
+  const email = (document.getElementById("email") as HTMLInputElement).value;
+  const student: Student = { id, year, major, title_name, first_name, last_name, email };
   manager.addStudent(student);
   renderTable();
 };
