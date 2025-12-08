@@ -1,0 +1,17 @@
+{
+    "compilerOptions": {
+        "target": "es6",
+        "module": "es6",
+        "outDir": "./dist",
+        "rootDir": "./src",
+        "strict": true
+    }
+}
+
+//ไฟล์ tsconfig.json ให้ทำอะไร = ไฟล์ tsconfig.json ใช้ในการกำหนดการตั้งค่าต่างๆ สำหรับการคอมไพล์ TypeScript เป็น JavaScript โดยในตัวอย่างนี้มีการตั้งค่าดังนี้:
+// "compilerOptions": กำหนดตัวเลือกการคอมไพล์ ต่างๆ
+// "target": "es6" กำหนดให้คอมไพล์เป็น JavaScript เวอร์ชัน ES6
+// "module": "es6" กำหนดรูปแบบโมดูลเป็น ES6
+// "outDir": "./dist" กำหนดโฟลเดอร์ที่เก็บไฟล์ที่คอมไพล์แล้ว
+// "rootDir": "./src" กำหนดโฟลเดอร์ต้นทางของไฟล์ TypeScript
+// "strict": true เปิดใช้งานโหมดเข้มงวดในการตรวจสอบประเภทข้อมูล
