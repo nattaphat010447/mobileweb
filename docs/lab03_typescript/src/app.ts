@@ -16,10 +16,10 @@ function renderTable(elementId: string = "studentTableBody"): void {
     tableBody.innerHTML += `
       <tr>
         <td>${s.id}</td>
-        <td>แก้ไขเป็น title_name</td>
-        <td>แก้ไขเป็น first_name</td>
-        <td>แก้ไขเป็น last_name</td>
-        <td>แก้ไขเป็น email</td>
+        <td>${s.title_name}</td>
+        <td>${s.first_name}</td>
+        <td>${s.last_name}</td>
+        <td>${s.email}</td>
         <td>${s.year}</td>
         <td>${s.major}</td>
       </tr>
