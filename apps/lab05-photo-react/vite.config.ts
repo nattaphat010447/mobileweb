@@ -10,6 +10,10 @@ export default defineConfig({
     react(),
     legacy()
   ],
+  build: {
+    outDir: '../../docs/lab05_photo_react',
+    emptyOutDir: true
+  },
   test: {
     globals: true,
     environment: 'jsdom',
